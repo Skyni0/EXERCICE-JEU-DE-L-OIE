@@ -9,19 +9,21 @@ public class App {
         int total = 0;
         int nbrEssais = 5;
 
-        Random generateur = new Random();
+        while (total != 20) {
+            total = 0;
+            Random generateur = new Random();
 
-        for (int i = 0; i <= nbrEssais; i++) {
+            for (int i = 0; i <= nbrEssais; i++) {
 
-            int lancer = generateur.nextInt(6) + 1;
-            System.out.println("Vous avez fait " + lancer);
+                int lancer = generateur.nextInt(6) + 1;
+                System.out.println("Vous avez fait " + lancer);
 
-            total += lancer;
-            System.out.println("Vous êtes à la case " + total);
+                total += lancer;
+                System.out.println("Vous êtes à la case " + total);
 
+            }
         }
         System.out.println(total == 20 ? "Vous avez gagné !" : "Perdu ! ");
 
     }
-
 }
